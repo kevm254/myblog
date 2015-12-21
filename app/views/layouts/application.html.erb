@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
   <title>BlogU</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,8 +8,25 @@
 </head>
 <body>
 <div class="container-fluid">
-  <nav class="navbar navbar-light">Blog</nav>
-<%= yield %>
-</div>
+  <div ng-controller="myController">
+
+    {{ test + 4 + 5}}
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'nav/nav' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= yield %>
+    </div>
+  </div>
+</div> <!-- end of container fluid-->
+
+
+
 </body>
 </html>

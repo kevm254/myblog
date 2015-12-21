@@ -21,6 +21,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.9.3)
+      activemodel (>= 3.2)
     activejob (4.2.5)
       activesupport (= 4.2.5)
       globalid (>= 0.3.0)
@@ -46,6 +48,7 @@ GEM
     bootstrap (4.0.0.alpha2)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.1)
     coffee-rails (4.1.0)
@@ -147,7 +150,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   bootstrap (~> 4.0.0.alpha1)
+  bower-rails
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
