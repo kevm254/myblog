@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .config(function($routeProvider){
+    .config(['$routeProvider', function($routeProvider){
         $routeProvider
             .when('/', {
                 templateUrl: '/static/show',
@@ -17,4 +17,4 @@ angular.module('myApp')
                 templateUrl: 'articles/edit',
                 controller: 'homeController'
             });
-    });
+    }]);
