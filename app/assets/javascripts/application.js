@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular/angular
-//= require turbolinks
+//= require ./angular/lib/angular
+//= require ./angular/lib/angular-route
+//= require ./angular/app.js
+//= require ./angular/controllers/homeController.js
+//= require ./angular/routes.js
 //= require bootstrap-sprockets
 //= require tether
-//= require_tree .
+

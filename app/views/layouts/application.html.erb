@@ -2,31 +2,17 @@
 <html ng-app="myApp">
 <head>
   <title>BlogU</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 <div class="container-fluid">
-  <div ng-controller="myController">
-
-    {{ test + 4 + 5}}
-  </div>
-
-
   <div class="row">
     <div class="col-md-12">
-      <%= render 'nav/nav' %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <%= yield %>
+    <%= yield %>
     </div>
   </div>
 </div> <!-- end of container fluid-->
-
-
-
 </body>
 </html>
