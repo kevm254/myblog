@@ -8,15 +8,10 @@ angular.module('myApp')
                         templateUrl: '/static/list',
                         controller: 'homeController'
                     },
-                    'new': {
-                        templateUrl: '/articles/new',
-                        controller: 'homeController'
-                    },
                     'show': {
                         templateUrl: '/static/show',
                         controller: 'homeController'
                     }
-
                 }
             })
             .state('new', {
@@ -29,6 +24,19 @@ angular.module('myApp')
                 }
 
             })
+            .state('show', {
+                url: '/show',
+                views: {
+                    'main': {
+                        templateUrl: '/static/list',
+                        controller: 'homeController'
+                    },
+                    'show': {
+                        templateUrl: '/static/show',
+                        controller: 'homeController'
+                    }
+                }
+            });
 
 
             $urlRouterProvider.otherwise('/');

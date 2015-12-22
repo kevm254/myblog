@@ -1,12 +1,20 @@
 angular.module('myApp')
-    .controller('homeController', ['$scope', '$http', function($scope, $http){
+    .controller('homeController', ['$anchorScroll', '$location', '$scope', '$http', function($anchorScroll, $locoation, $scope, $http){
+        // Scrolls to the top of the page
+        $scope.scrollTop = function(){
+            $location.hash('top');
+            $anchorScroll();
+        };
+
+        // Get all of the articles
         $http.get('./articles').success(function(response){
             $scope.articles = response.articles;
         });
 
-        $scope.getArticle = function(){
-            $http.get('./articles/1'). success(function(response){
-                alert(response);
+        // get a single article and assign text to variable
+        $scope.getArticle = function(id){
+            $http.get('./articles/' + id).success(function(response){
+                $scope.articleText = response.text;
             });
         };
     }]);

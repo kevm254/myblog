@@ -1,17 +1,19 @@
-
-    <button class="btn btn-success" ng-click="getArticle()">Click here</button>
-    <table class="table" ng-repeat="article in articles">
+<a id="top"></a>
+<div class="col-md-4">
+<table class="table" ng-repeat="article in articles">
         <thead>
         <tr>
-            <th>{{ article.title }}</th>
+            <th><a href="#" ng-Click="getArticle(article.id); ">{{ article.title }}</a><br>
+                <small>Created on: {{ article.created_at | date }}</small>
+            </th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>Article ID: {{ article.id }}</td>
-        </tr>
-        <tr>
-            <td>{{ article.text }}</td>
+            <td>{{ article.description }}</td>
         </tr>
         </tbody>
     </table>
+</div>
+
+<div class="col-md-8 col-md-offset-4" style="position:fixed">{{ articleText }}</div>
