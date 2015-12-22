@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   end
   root 'static#index'
 
+  get '/static/list', to: 'static#list'
   get '/static/show', to: 'static#show'
 end

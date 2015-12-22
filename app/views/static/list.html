@@ -1,0 +1,17 @@
+
+    <button class="btn btn-success" ng-click="getArticle()">Click here</button>
+    <table class="table" ng-repeat="article in articles">
+        <thead>
+        <tr>
+            <th>{{ article.title }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Article ID: {{ article.id }}</td>
+        </tr>
+        <tr>
+            <td>{{ article.text }}</td>
+        </tr>
+        </tbody>
+    </table>

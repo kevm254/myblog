@@ -15,11 +15,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-
+    render json: @articles, status: :ok
     if @article.save
-      redirect_to @article
+      flash[:success] = 'Article was successfully created!'
     else
-      render 'new'
     end
   end
 
@@ -35,6 +34,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    render json: @article, status: :ok
   end
 
   def destroy

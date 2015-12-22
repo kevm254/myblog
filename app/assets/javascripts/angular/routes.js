@@ -1,20 +1,36 @@
 angular.module('myApp')
-    .config(['$routeProvider', function($routeProvider){
-        $routeProvider
-            .when('/', {
-                templateUrl: '/static/show',
-                controller: 'homeController'
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+        $stateProvider
+            .state('home', {
+                url: '/',
+                views: {
+                    'main': {
+                        templateUrl: '/static/list',
+                        controller: 'homeController'
+                    },
+                    'new': {
+                        templateUrl: '/articles/new',
+                        controller: 'homeController'
+                    },
+                    'show': {
+                        templateUrl: '/static/show',
+                        controller: 'homeController'
+                    }
+
+                }
             })
-            .when('/form', {
-                templateUrl: 'articles/new',
-                controller: 'homeController'
+            .state('new', {
+                url: '/new',
+                views: {
+                    'main': {
+                        templateUrl: 'articles/new',
+                        controller: 'homeController'
+                    }
+                }
+
             })
-            .when('/show', {
-                templateUrl: '/static/show',
-                controller: 'homeController'
-            })
-            .when('/edit', {
-                templateUrl: 'articles/edit',
-                controller: 'homeController'
-            });
+
+
+            $urlRouterProvider.otherwise('/');
+
     }]);

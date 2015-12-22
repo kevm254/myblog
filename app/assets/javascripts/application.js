@@ -17,6 +17,7 @@
 //= require ./angular/lib/angular-animate
 //= require ./angular/app.js
 //= require ./angular/controllers/homeController.js
+//= require ./angular/lib/angular-ui-router.js
 //= require ./angular/routes.js
 //= require bootstrap-sprockets
 //= require tether

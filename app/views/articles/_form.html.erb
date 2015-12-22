@@ -12,3 +12,11 @@
 <p>
   <%= f.submit %>
 </p>
+
+<script>
+  var input = document.querySelector("input[type='submit'");
+  input.addEventListener('click', function(event){
+    event.preventDefault();
+    alert($("input[type='text']").val());
+  })
+</script>
