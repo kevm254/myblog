@@ -12,5 +12,9 @@ angular.module('myApp')
             .when('/show', {
                 templateUrl: '/static/show',
                 controller: 'homeController'
+            })
+            .when('/edit', {
+                templateUrl: 'articles/edit',
+                controller: 'homeController'
             });
     });

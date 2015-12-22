@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require ./angular/lib/angular
 //= require ./angular/lib/angular-route
+//= require ./angular/lib/angular-animate
 //= require ./angular/app.js
 //= require ./angular/controllers/homeController.js
 //= require ./angular/routes.js
