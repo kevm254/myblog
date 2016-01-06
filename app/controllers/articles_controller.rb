@@ -15,10 +15,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    render json: @articles, status: :ok
     if @article.save
-      flash[:success] = 'Article was successfully created!'
+      render json: @articles, status: :created, location: @articles
     else
+      render json: @articles.errors, status: unprocessable_entity
     end
   end
 

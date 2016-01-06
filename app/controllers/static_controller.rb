@@ -1,10 +1,5 @@
 class StaticController < ApplicationController
   def index
-  end
-
-  def list
-  end
-
-  def show
+    render 'layouts/application'
   end
 end

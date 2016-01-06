@@ -3,16 +3,27 @@
 <head>
   <title>BlogU</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 
 </head>
-<body>
+<body ng-app="myApp">
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-    <%= yield %>
+      <%= render 'layouts/navbar' %>
     </div>
   </div>
-</div> <!-- end of container fluid-->
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div ui-view class="slide-animation"></div>
+  </div>
+</div>
+
+
 </body>
 </html>
