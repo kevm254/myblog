@@ -3,11 +3,24 @@ angular.module('myApp')
         $stateProvider
         // VIEWS /////////////////////////////////////////////
             // HOME //
+            .state('home', {
+                url: '/',
+                templateUrl: './templates/index.html'
+            })
+
+            // ARTICLES //
             .state('articles', {
                 url: '/articles',
                 templateUrl: './templates/articles.html',
                 controller: 'homeController'
+            })
+
+            // PORTFOLIO //
+            .state('portfolio', {
+               url: '/portfolio',
+                templateUrl: './templates/portfolio.html'
             });
+
             // EVERYTHING ELSE //
             $urlRouterProvider.otherwise('/');
 
