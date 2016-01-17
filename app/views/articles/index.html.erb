@@ -1,6 +1,7 @@
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-12">
+    <%= render partial: 'inline_form' %>
       <h1>Flow of Consciousness</h1>
 
     <% @articles.each do |article| %>
@@ -9,6 +10,9 @@
         <thead>
           <tr>
             <th><%= article.title %></th>
+          </tr>
+          <tr>
+            <th><%= article.created_at %></th>
           </tr>
         </thead>
         <tbody>

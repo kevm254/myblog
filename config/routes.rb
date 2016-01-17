@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :portfolio_pieces
+
   root 'static#index2'
 
   get 'api/articles', to: 'articles_api#index'
