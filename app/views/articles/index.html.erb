@@ -1,0 +1,33 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12">
+      <h1>Flow of Consciousness</h1>
+
+    <% @articles.each do |article| %>
+
+    <table>
+        <thead>
+          <tr>
+            <th><%= article.title %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= article.text %></td>
+          </tr>
+          <tr>
+            <td><%= link_to "Edit", edit_article_path(article) %>
+                <%= link_to "Delete", article_path(article), method: :delete %>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+      <br>
+    <% end %>
+
+
+
+  </div>
+  </div>
+</div>
+

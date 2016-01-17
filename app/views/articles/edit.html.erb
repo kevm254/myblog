@@ -1,0 +1,10 @@
+<h1>Edit the Article</h1>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <%= form_for @article, class: 'form-horizontal' do |f| %>
+      <%= render partial: 'form', locals: { f: f } %>
+          <% end %>
+    </div>
+  </div>
+</div>

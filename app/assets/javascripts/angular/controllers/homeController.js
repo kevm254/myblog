@@ -10,15 +10,20 @@ angular.module('myApp')
         $scope.use = "hi there";
 
         // Get all of the articles
-        $http.get('./articles').success(function(response){
-            $scope.articles = response.articles;
-        });
+        $scope.getAllArticles = function(){
+            $http.get('./api/articles').success(function(response) {
+                $scope.articles = response.articles_api;
+
+            });
+        };
+
+
         /////////////////////////////////////////////////////
 
 
         // get a single article and assign text to variable
         $scope.getArticle = function(id){
-            $http.get('./articles/' + id).success(function(response){
+            $http.get('.api/articles/' + id).success(function(response){
                 $scope.articleText = response.text;
             });
         };
@@ -26,6 +31,10 @@ angular.module('myApp')
 
         // Post
         $scope.editArticle = function(id){
+            $http.post("/articles/new", data).success(function(data, status){
+                $scope.hello = data;
+                $scope.status = status;
+            })
 
         };
         /////////////////////////////////////////////////////

@@ -3,7 +3,7 @@
     <div class="row">
             <a id="top"></a>
             <div class="col-sm-12 col-md-12">
-                <table class="table table-striped table-bordered" ng-repeat="article in articles">
+                <table class="table table-striped table-bordered" ng-repeat="article in articles | orderBy: '">
                      <thead>
                          <tr>
                             <th>

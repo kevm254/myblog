@@ -5,6 +5,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap', '~> 4.0.0.alpha1'
+gem "font-awesome-sass"
 gem 'sprockets-rails', '~> 2.3.2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>=1.1.0'

@@ -5,7 +5,7 @@ angular.module('myApp')
             // HOME //
             .state('home', {
                 url: '/',
-                templateUrl: './templates/index.html'
+                templateUrl: './templates/index.html.erb'
             })
 
             // ARTICLES //

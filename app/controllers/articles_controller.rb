@@ -1,25 +1,24 @@
 class ArticlesController < ApplicationController
-  #http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   def index
     @articles = Article.all
-    render json: @articles, status: :ok
   end
 
   def new
     @article = Article.new
   end
 
-  def edit
-    @article = Article.find(params[:id])
-  end
 
   def create
     @article = Article.new(article_params)
     if @article.save
-      render json: @articles, status: :created, location: @articles
+      redirect_to articles_path
     else
-      render json: @articles.errors, status: unprocessable_entity
+      render :new
     end
+  end
+
+  def edit
+    @article = Article.find(params[:id])
   end
 
   def update
@@ -28,13 +27,12 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def show
     @article = Article.find(params[:id])
-    render json: @article, status: :ok
   end
 
   def destroy
