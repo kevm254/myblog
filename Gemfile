@@ -13,6 +13,7 @@ end
 gem 'bower-rails'
 gem 'active_model_serializers'
 
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
