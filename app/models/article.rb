@@ -3,9 +3,13 @@ class Article < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   belongs_to :user
 
-  ### VALIDATIONS ####
-  validates :title, presence: true, length: { minimum: 5 }
+  ##### VALIDATIONS ####
+  ### ENSURES PRESENCE
+  validates :title, presence: true
 
+
+  ### ENSURES RANGE
+  validates :title, length: { minimum: 5 }
 
   ### UTILITY METHODS ####
   def created_at_f

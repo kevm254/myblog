@@ -7,20 +7,8 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body ng-app="myApp">
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <%= render 'layouts/navbar' %>
-      </div>
-    </div>
-  </div>
-
-    <!--<div ui-view class="slide-animation"></div>-->
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
-
+<body>
+  <%= render 'layouts/navbar' %>
+  <%= yield %>
 </body>
 </html>

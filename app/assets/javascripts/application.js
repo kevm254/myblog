@@ -12,17 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-// ANGULAR ///////////////////////////////////
-// DEPENDENCIES
-//= require ./angular/lib/angular
-//= require ./angular/lib/angular-route
-//= require ./angular/lib/angular-animate
-//= require ./angular/lib/angular-ui-router.js
-// APP
-//= require ./angular/app.js
-// CONTROLLERS AND SERVICES
-//= require ./angular/controllers/homeController.js
-//= require ./angular/routes.js
 //= require bootstrap-sprockets
 //= require tether
 

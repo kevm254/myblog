@@ -1,7 +1,6 @@
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-12">
-    <%= render partial: 'inline_form' %>
       <h1>Flow of Consciousness</h1>
 
     <% @articles.each do |article| %>
@@ -29,9 +28,20 @@
       <br>
     <% end %>
 
-
-
   </div>
   </div>
 </div>
 
+
+<div id="accordion">
+  <h3>Test</h3>
+  <div>
+    <p>Test text</p>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $("#accordion").accordion();
+  });
+</script>

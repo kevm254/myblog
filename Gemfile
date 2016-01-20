@@ -12,13 +12,15 @@ source 'https://rails-assets.org' do
 end
 gem 'bower-rails'
 gem 'active_model_serializers'
-
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.5.1'
+gem 'pundit'
+source 'https://rubygems.org' do
+  gem 'jquery-ui-rails'
+end
 
 
 group :development do
@@ -42,6 +44,8 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 group :development do
@@ -52,3 +56,10 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'faker', '~> 1.4.3'
+  gem 'capybara', '~> 2.4.3'
+  gem 'database_cleaner', '~> 1.3.0'
+  gem 'launchy', '~> 2.4.2'
+  gem 'selenium-webdriver', '~>2.43.0'
+end
