@@ -7,9 +7,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap', '~> 4.0.0.alpha1'
 gem "font-awesome-sass"
 gem 'sprockets-rails', '~> 2.3.2'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>=1.1.0'
-end
 gem 'bower-rails'
 gem 'active_model_serializers'
 gem 'jquery-rails'
@@ -18,6 +15,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.5.1'
 gem 'pundit'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>=1.1.0'
+end
 source 'https://rubygems.org' do
   gem 'jquery-ui-rails'
 end
