@@ -1,47 +1,16 @@
-<div class="container-fluid">
 <div class="row">
   <div class="col-md-12">
-      <h1>Flow of Consciousness</h1>
+    <h1>Flow of Consciousness</h1>
 
     <% @articles.each do |article| %>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-warning">
+        <h2 class="list-group-item-heading"><%= article.title %></h2>
+        <h7>Created on: <%= article.created_at_f %></h7>
+        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <%= link_to "Edit", edit_article_path(article) %>
+        <%= link_to "Delete", article_path(article), method: :delete %>
 
-    <table>
-        <thead>
-          <tr>
-            <th><h2><%= article.title %></h2></th>
-          </tr>
-          <tr>
-            <th><%= article.created_at_f %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><%= article.text %></td>
-          </tr>
-          <tr>
-            <td><%= link_to "Edit", edit_article_path(article) %>
-                <%= link_to "Delete", article_path(article), method: :delete %>
-            </td>
-          </tr>
-        </tbody>
-    </table>
-      <br>
+      </a>
+    </div>
     <% end %>
-
-  </div>
-  </div>
-</div>
-
-
-<div id="accordion">
-  <h3>Test</h3>
-  <div>
-    <p>Test text</p>
-  </div>
-</div>
-
-<script>
-  $(function() {
-    $("#accordion").accordion();
-  });
-</script>

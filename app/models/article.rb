@@ -13,7 +13,6 @@ class Article < ActiveRecord::Base
 
   ### UTILITY METHODS ####
   def created_at_f
-    "Created on: #{created_at.strftime('%m/%d/%y')}"
-
+    created_at.strftime('%m/%d/%y')
   end
 end

@@ -1,7 +1,19 @@
-<section class="container">
-  <div class="row">
-    <div role="thumbnail" class="col-md-4"></div>
-    <div role="thumbnail" class="col-md-4">two</div>
-    <div role="thumbnail" class="col-md-4">three</div>
-  </div>
+<section class="row">
+
+  <% @portfolio.each do |portfolio| %>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" data-src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title"><%= portfolio.site_name %></h4>
+          <p class="card-text"><%= portfolio.description %></p>
+          <%= link_to "Visit Site", root_path, class: 'btn btn-success' %>
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+
 </section>
+
+
