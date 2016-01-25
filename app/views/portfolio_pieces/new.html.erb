@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="text-center">Create a New Entry</h1>
+  <div class="row">
+    <%= form_for @portfolio_piece, class: 'form-horizontal' do |f| %>
+      <%= render partial: 'form', locals: { f: f } %>
+    <% end %>
+  </div>
+</div>

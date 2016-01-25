@@ -30,7 +30,6 @@ h2 {
 }
 
 .section_custom{
-  background-color: black;
   color: white;
   min-height: 400px;
   width: 100%;
@@ -38,7 +37,10 @@ h2 {
   padding-left: 14%;
 }
 
+.intro_section {
+  background: black;
 
+}
 
 .intro_section h1 {
   font-size: 80px;
@@ -56,4 +58,8 @@ h2 {
 
 .skill_section .block {
   height: 200px;
+}
+
+.language_blocks {
+  background: rgba(0,0,0,0);
 }
