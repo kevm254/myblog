@@ -4,13 +4,18 @@
 
     <% @articles.each do |article| %>
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-warning">
+      <a href="#" class="list-group-item list-group-item-success">
         <h2 class="list-group-item-heading"><%= article.title %></h2>
-        <h7>Created on: <%= article.created_at_f %></h7>
         <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-        <%= link_to "Edit", edit_article_path(article) %>
-        <%= link_to "Delete", article_path(article), method: :delete %>
+        <small>Created on: <%= article.created_at_f %></small>
 
+
+        <% if user_signed_in? %>
+          <%= link_to "Edit", edit_article_path(article) %>
+          <%= link_to "Delete", article_path(article), method: :delete %>
+        <% end %>
+
+        <br>
       </a>
     </div>
     <% end %>
